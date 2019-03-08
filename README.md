@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample rails application to reproduce a strange behaviour with timeouts.
 
-Things you may want to cover:
+This is a separate rails application, but it expects the Satellite 6.5 Rails stack.
 
-* Ruby version
+## Usage:
 
-* System dependencies
+To see the failure, run
 
-* Configuration
+```
+./fails.sh
+```
 
-* Database creation
+Compare it to the version that works:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+./works.sh
+```
