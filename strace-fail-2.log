@@ -1,0 +1,1446 @@
+execve()
+execve("/usr/bin/bash", ["bash", "./fails2.sh"], 0x7ffd75889a50 /* 76 vars */) = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19510] +++ exited with 0 +++
+[pid 18647] getsockname(8, {sa_family=AF_INET, sin_port=htons(54318), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a4dfd20, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999936564})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-7qp44o") = -1 ENOENT (No such file or directory)
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1axt9s2", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1axt9s2", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1axt9s2", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1axt9s2", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19511 attached
+ <unfinished ...>
+[pid 19511] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19511
+[pid 19511] <... set_robust_list resumed> ) = 0
+[pid 19511] sched_getaffinity(19511, 32,  <unfinished ...>
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19511] <... sched_getaffinity resumed> [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 19511] sigaltstack({ss_sp=0x55cd4a43bfe0, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 18647] <... socket resumed> )      = 8
+[pid 19511] <... sigaltstack resumed> {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19511] prctl(PR_SET_NAME, "timeout.rb:83") = 0
+[pid 19511] prctl(PR_SET_NAME, "")      = 0
+[pid 19511] futex(0x55cd48e6a0d8, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999999463} <unfinished ...>
+[pid 18647] <... connect resumed> )     = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd48e6a0d8, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 19511] <... futex resumed> )       = 0
+[pid 18647] futex(0x55cd45922f8c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19511] futex(0x55cd48e6a118, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19511] futex(0x55cd45922f8c, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19511] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19511] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19511] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19511] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54320), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19511] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a447fe0, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999924092})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1m2tjg6", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1m2tjg6", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1m2tjg6", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1m2tjg6", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19512 attached
+child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19512
+[pid 19512] set_robust_list(0x7fdbebaa59e0, 24) = 0
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19512] sched_getaffinity(19512, 32, [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 18647] <... socket resumed> )      = 8
+[pid 19512] sigaltstack({ss_sp=0x55cd4a430190, ss_flags=0, ss_size=16384}, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 19512] getpid()                    = 18647
+[pid 19512] getpid()                    = 18647
+[pid 19512] write(6, "!", 1 <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19512] <... write resumed> )       = 1
+[pid 19512] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19512] futex(0x55cd45922a48, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 18647] futex(0x55cd45922a48, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19512] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19512] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19512] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19512] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] <... connect resumed> )     = 0
+[pid 19512] <... futex resumed> )       = 0
+[pid 18647] getpid( <unfinished ...>
+[pid 19512] prctl(PR_SET_NAME, "timeout.rb:83" <unfinished ...>
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19512] <... prctl resumed> )       = 0
+[pid 18647] getpid( <unfinished ...>
+[pid 19512] prctl(PR_SET_NAME, "" <unfinished ...>
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19512] <... prctl resumed> )       = 0
+[pid 18647] write(6, "!", 1 <unfinished ...>
+[pid 19512] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] <... write resumed> )       = 1
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 19512] <... futex resumed> )       = 0
+[pid 18647] futex(0x55cd45922a4c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19512] futex(0x55cd45922a4c, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19512] <... futex resumed> )       = 0
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19512] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19512] <... futex resumed> )       = 0
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19512] futex(0x55cd48e938a8, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999516436} <unfinished ...>
+[pid 18647] <... futex resumed> )       = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd48e938a8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19512] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19512] futex(0x55cd48e938e8, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd48e938e8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19512] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19512] futex(0x55cd48e938e8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f88, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19512] <... futex resumed> )       = 0
+[pid 19512] futex(0x55cd45922f88, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19512] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19512] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19512] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19512] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54322), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19512] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-aqdhyw") = -1 ENOENT (No such file or directory)
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a44bff0, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999903157})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-whfd44", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-whfd44", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-whfd44", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-whfd44", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2azn5h") = -1 ENOENT (No such file or directory)
+[pid 18647] clone(strace: Process 19513 attached
+ <unfinished ...>
+[pid 19513] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19513
+[pid 19513] <... set_robust_list resumed> ) = 0
+[pid 19513] sched_getaffinity(19513, 32,  <unfinished ...>
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19513] <... sched_getaffinity resumed> [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 19513] sigaltstack({ss_sp=0x55cd4a4183d0, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 18647] <... socket resumed> )      = 8
+[pid 19513] <... sigaltstack resumed> {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19513] prctl(PR_SET_NAME, "timeout.rb:83") = 0
+[pid 19513] prctl(PR_SET_NAME, "")      = 0
+[pid 19513] futex(0x55cd4a30ddd8, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999999608} <unfinished ...>
+[pid 18647] <... connect resumed> )     = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd4a30ddd8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19513] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19513] futex(0x55cd4a30de18, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd4a30de18, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19513] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19513] futex(0x55cd4a30de18, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f8c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19513] <... futex resumed> )       = 0
+[pid 19513] futex(0x55cd45922f8c, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19513] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19513] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19513] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19513] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54324), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19513] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a423fe0, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999970186})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1pnngt") = -1 ENOENT (No such file or directory)
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zc6gji", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zc6gji", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zc6gji", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zc6gji", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19514 attached
+ <unfinished ...>
+[pid 19514] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19514
+[pid 19514] <... set_robust_list resumed> ) = 0
+[pid 19514] sched_getaffinity(19514, 32,  <unfinished ...>
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19514] <... sched_getaffinity resumed> [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 19514] sigaltstack({ss_sp=0x55cd4a3143b0, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 18647] <... socket resumed> )      = 8
+[pid 19514] <... sigaltstack resumed> {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19514] prctl(PR_SET_NAME, "timeout.rb:83") = 0
+[pid 19514] prctl(PR_SET_NAME, "" <unfinished ...>
+[pid 18647] <... connect resumed> )     = 0
+[pid 19514] <... prctl resumed> )       = 0
+[pid 18647] getpid( <unfinished ...>
+[pid 19514] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(6, "!", 1)            = 1
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19514] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19514] futex(0x55cd45922a48, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19514] <... futex resumed> )       = 0
+[pid 19514] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19514] futex(0x55cd4a453588, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999860578} <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd4a453588, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19514] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19514] futex(0x55cd4a4535c8, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd4a4535c8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19514] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19514] futex(0x55cd4a4535c8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f88, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19514] <... futex resumed> )       = 0
+[pid 19514] futex(0x55cd45922f88, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19514] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19514] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19514] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19514] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54326), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19514] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a468360, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999965162})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vozdc1") = -1 ENOENT (No such file or directory)
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tqwbtu", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tqwbtu", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tqwbtu", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tqwbtu", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19515 attached
+ <unfinished ...>
+[pid 19515] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19515
+[pid 19515] <... set_robust_list resumed> ) = 0
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19515] sched_getaffinity(19515, 32, [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 18647] <... socket resumed> )      = 8
+[pid 19515] sigaltstack({ss_sp=0x55cd4a46c370, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19515] <... sigaltstack resumed> {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 19515] prctl(PR_SET_NAME, "timeout.rb:83") = 0
+[pid 18647] <... connect resumed> )     = 0
+[pid 19515] prctl(PR_SET_NAME, "" <unfinished ...>
+[pid 18647] getpid( <unfinished ...>
+[pid 19515] <... prctl resumed> )       = 0
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19515] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(6, "!", 1)            = 1
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19515] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19515] futex(0x55cd45922a4c, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19515] <... futex resumed> )       = 0
+[pid 19515] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19515] futex(0x55cd495fbdb8, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999874181} <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd495fbdb8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19515] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19515] futex(0x55cd495fbdf8, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd495fbdf8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19515] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19515] futex(0x55cd495fbdf8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f8c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19515] <... futex resumed> )       = 0
+[pid 19515] futex(0x55cd45922f8c, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19515] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19515] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19515] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19515] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54328), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19515] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a427ff0, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999980676})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16icyu2", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16icyu2", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16icyu2", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16icyu2", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19516 attached
+ <unfinished ...>
+[pid 19516] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19516
+[pid 19516] <... set_robust_list resumed> ) = 0
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19516] sched_getaffinity(19516, 32, [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 18647] <... socket resumed> )      = 8
+[pid 19516] sigaltstack({ss_sp=0x55cd4a4ee620, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19516] <... sigaltstack resumed> {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 19516] prctl(PR_SET_NAME, "timeout.rb:83") = 0
+[pid 19516] prctl(PR_SET_NAME, "" <unfinished ...>
+[pid 18647] <... connect resumed> )     = 0
+[pid 19516] <... prctl resumed> )       = 0
+[pid 18647] getpid( <unfinished ...>
+[pid 19516] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(6, "!", 1)            = 1
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19516] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19516] futex(0x55cd45922a48, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19516] <... futex resumed> )       = 0
+[pid 19516] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19516] futex(0x55cd4a2ec928, FUTEX_WAIT_PRIVATE, 0, {tv_sec=59, tv_nsec=999867450} <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 18647] fstat(8, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 18647] futex(0x55cd4a2ec928, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19516] <... futex resumed> )       = 0
+[pid 18647] <... futex resumed> )       = 1
+[pid 19516] futex(0x55cd4a2ec968, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd4a2ec968, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19516] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19516] futex(0x55cd4a2ec968, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f88, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19516] <... futex resumed> )       = 0
+[pid 19516] futex(0x55cd45922f88, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19516] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19516] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19516] exit(0 <unfinished ...>
+[pid 18647] getsockname(8,  <unfinished ...>
+[pid 19516] <... exit resumed>)         = ?
+[pid 18647] <... getsockname resumed> {sa_family=AF_INET, sin_port=htons(54330), sin_addr=inet_addr("127.0.0.1")}, [2048->16]) = 0
+[pid 19516] +++ exited with 0 +++
+[pid 18647] setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1xwygp8") = -1 ENOENT (No such file or directory)
+[pid 18647] write(8, "GET / HTTP/1.1\r\nAccept-Encoding:"..., 124) = 124
+[pid 18647] recvfrom(8, 0x55cd4a4fc4c0, 16384, MSG_DONTWAIT, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] ppoll([{fd=8, events=POLLIN}], 1, {tv_sec=60, tv_nsec=0}, NULL, 8) = 1 ([{fd=8, revents=POLLIN}], left {tv_sec=59, tv_nsec=999972634})
+[pid 18647] recvfrom(8, "HTTP/1.1 200 OK\r\nDate: Fri, 08 M"..., 16384, MSG_DONTWAIT, NULL, NULL) = 386
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2338, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjy2vn", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 8
+[pid 18647] ioctl(8, TCGETS, 0x7ffd4c324160) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] getpid()                    = 18647
+[pid 18647] write(8, "\4\10o: ActiveSupport::Cache::Entry"..., 100) = 100
+[pid 18647] close(8)                    = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] stat("/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello", {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+[pid 18647] chown("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjy2vn", 1000, 1000) = 0
+[pid 18647] chmod("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjy2vn", 0100644) = 0
+[pid 18647] rename("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjy2vn", "/home/inecas/tmp/cache-net-timeout/tmp/cache/215/2C0/hello") = 0
+[pid 18647] clone(strace: Process 19517 attached
+ <unfinished ...>
+[pid 19517] set_robust_list(0x7fdbebaa59e0, 24 <unfinished ...>
+[pid 18647] <... clone resumed> child_stack=0x7fdbebaa4fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fdbebaa59d0, tls=0x7fdbebaa5700, child_tidptr=0x7fdbebaa59d0) = 19517
+[pid 19517] <... set_robust_list resumed> ) = 0
+[pid 18647] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP <unfinished ...>
+[pid 19517] sched_getaffinity(19517, 32,  <unfinished ...>
+[pid 18647] <... socket resumed> )      = 8
+[pid 19517] <... sched_getaffinity resumed> [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+[pid 18647] connect(8, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("127.0.0.1")}, 16 <unfinished ...>
+[pid 19517] sigaltstack({ss_sp=0x55cd4a4f2630, ss_flags=0, ss_size=16384}, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 18647] <... connect resumed> )     = 0
+[pid 19517] prctl(PR_SET_NAME, "timeout.rb:83" <unfinished ...>
+[pid 18647] getpid( <unfinished ...>
+[pid 19517] <... prctl resumed> )       = 0
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19517] prctl(PR_SET_NAME, "" <unfinished ...>
+[pid 18647] getpid( <unfinished ...>
+[pid 19517] <... prctl resumed> )       = 0
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19517] getpid( <unfinished ...>
+[pid 18647] write(6, "!", 1 <unfinished ...>
+[pid 19517] <... getpid resumed> )      = 18647
+[pid 18647] <... write resumed> )       = 1
+[pid 19517] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19517] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] futex(0x55cd45922a4c, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19517] <... futex resumed> )       = 0
+[pid 19517] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12m08dj" <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19517] <... unlink resumed> )      = -1 ENOENT (No such file or directory)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] getpid( <unfinished ...>
+[pid 18647] fstat(8,  <unfinished ...>
+[pid 19517] <... getpid resumed> )      = 18647
+[pid 18647] <... fstat resumed> {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+[pid 19517] getpid( <unfinished ...>
+[pid 18647] getpid( <unfinished ...>
+[pid 19517] <... getpid resumed> )      = 18647
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19517] write(6, "!", 1 <unfinished ...>
+[pid 18647] getpid( <unfinished ...>
+[pid 19517] <... write resumed> )       = 1
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 19517] futex(0x55cd45922a48, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 18647] write(4, "!", 1)            = 1
+[pid 18706] <... poll resumed> )        = 1 ([{fd=3, revents=POLLIN}])
+[pid 18647] getpid( <unfinished ...>
+[pid 18706] read(3,  <unfinished ...>
+[pid 18647] <... getpid resumed> )      = 18647
+[pid 18706] <... read resumed> "!", 1024) = 1
+[pid 18647] tgkill(18647, 19517, SIGVTALRM <unfinished ...>
+[pid 18706] read(3,  <unfinished ...>
+[pid 19517] <... futex resumed> )       = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+[pid 18706] <... read resumed> 0x55cd4511cc00, 1024) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19517] --- SIGVTALRM {si_signo=SIGVTALRM, si_code=SI_TKILL, si_pid=18647, si_uid=1000} ---
+[pid 18706] read(5,  <unfinished ...>
+[pid 19517] rt_sigreturn({mask=[]} <unfinished ...>
+[pid 18706] <... read resumed> "!!!!!!!!!!!!!!!!!!!!!", 1024) = 21
+[pid 19517] <... rt_sigreturn resumed> ) = -1 EINTR (Interrupted system call)
+[pid 18706] read(5,  <unfinished ...>
+[pid 19517] futex(0x55cd45922a48, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 18706] <... read resumed> 0x55cd4511cc00, 1024) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 18647] <... tgkill resumed> )      = 0
+[pid 18706] getpid( <unfinished ...>
+[pid 18647] futex(0x55cd45922a48, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18706] <... getpid resumed> )      = 18647
+[pid 19517] <... futex resumed> )       = 0
+[pid 18706] tgkill(18647, 19517, SIGVTALRM <unfinished ...>
+[pid 19517] futex(0x55cd459229f0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 18706] <... tgkill resumed> )      = 0
+[pid 19517] <... futex resumed> )       = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+[pid 18706] poll([{fd=3, events=POLLIN}], 1, 100 <unfinished ...>
+[pid 19517] --- SIGVTALRM {si_signo=SIGVTALRM, si_code=SI_TKILL, si_pid=18647, si_uid=1000} ---
+[pid 18647] <... futex resumed> )       = 1
+[pid 19517] rt_sigreturn({mask=[]} <unfinished ...>
+[pid 18647] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19517] <... rt_sigreturn resumed> ) = -1 EINTR (Interrupted system call)
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] futex(0x55cd459229f0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18647] futex(0x55cd45922f8c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+[pid 19517] <... futex resumed> )       = 0
+[pid 19517] futex(0x55cd45922f8c, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] madvise(0x7fdbeb9a5000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19517] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 19517] exit(0)                     = ?
+[pid 19517] +++ exited with 0 +++
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/vendor/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/assets/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/channels/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/controllers/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/controllers/concerns/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/helpers/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/jobs/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/mailers/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/models/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/models/concerns/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/assets/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/controllers/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/controllers/concerns/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/javascript/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/jobs/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/models/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/bundler-1.16.6/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/rbenv.d/exec/gem-rehash/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sqlite3-1.3.13/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0-static/sqlite3-1.3.13/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sprockets-3.7.2/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 9
+[pid 18647] fstat(9, {st_mode=S_IFREG|0644, st_size=1081, ...}) = 0
+[pid 18647] close(9)                    = 0
+[pid 18647] getuid()                    = 1000
+[pid 18647] geteuid()                   = 1000
+[pid 18647] getgid()                    = 1000
+[pid 18647] getegid()                   = 1000
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 9
+[pid 18647] fcntl(9, F_SETFL, O_RDONLY) = 0
+[pid 18647] fstat(9, {st_mode=S_IFREG|0644, st_size=1081, ...}) = 0
+[pid 18647] ioctl(9, TCGETS, 0x7ffd4c3247d0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] read(9, "# frozen_string_literal: true\n\nr"..., 8192) = 1081
+[pid 18647] read(9, "", 8192)           = 0
+[pid 18647] close(9)                    = 0
+[pid 18647] lstat("/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas", {st_mode=S_IFDIR|0711, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems", {st_mode=S_IFDIR|0755, st_size=24576, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/backtrace_cleaner.rb", {st_mode=S_IFREG|0644, st_size=1081, ...}) = 0
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/vendor/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/assets/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/channels/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/controllers/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/controllers/concerns/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/helpers/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/jobs/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/mailers/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/models/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/tmp/cache-net-timeout/app/models/concerns/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/assets/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/controllers/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/controllers/concerns/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/javascript/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/jobs/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.1/app/models/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/bundler-1.16.6/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/rbenv.d/exec/gem-rehash/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sqlite3-1.3.13/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0-static/sqlite3-1.3.13/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/sprockets-3.7.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pry-doc-1.0.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/yard-0.9.18/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pry-0.12.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/method_source-0.9.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coderay-1.1.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/marcel-0.3.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/mimemagic-0.3.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/arel-9.0.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activemodel-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionmailer-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/mail-2.7.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/mini_mime-1.0.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activejob-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/globalid-0.4.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/websocket-driver-0.7.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0-static/websocket-driver-0.7.0/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/websocket-extensions-0.1.3/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/nio4r-2.3.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0-static/nio4r-2.3.1/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rack-test-1.1.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rack-2.0.5/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails-html-sanitizer-1.0.4/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/loofah-2.2.2/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/crass-1.0.4/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails-dom-testing-2.0.3/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/nokogiri-1.8.4/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0-static/nokogiri-1.8.4/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/mini_portile2-2.3.0/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/erubi-1.7.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/builder-3.2.3/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 9
+[pid 18647] fstat(9, {st_mode=S_IFREG|0644, st_size=3792, ...}) = 0
+[pid 18647] close(9)                    = 0
+[pid 18647] getuid()                    = 1000
+[pid 18647] geteuid()                   = 1000
+[pid 18647] getgid()                    = 1000
+[pid 18647] getegid()                   = 1000
+[pid 18647] openat(AT_FDCWD, "/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/backtrace_cleaner.rb", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 9
+[pid 18647] fcntl(9, F_SETFL, O_RDONLY) = 0
+[pid 18647] fstat(9, {st_mode=S_IFREG|0644, st_size=3792, ...}) = 0
+[pid 18647] ioctl(9, TCGETS, 0x7ffd4c323cf0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] read(9, "# frozen_string_literal: true\n\nm"..., 8192) = 3792
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-m1r2pk") = -1 ENOENT (No such file or directory)
+[pid 18647] read(9, "", 8192)           = 0
+[pid 18647] close(9)                    = 0
+[pid 18647] lstat("/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas", {st_mode=S_IFDIR|0711, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems", {st_mode=S_IFDIR|0755, st_size=24576, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 18647] lstat("/home/inecas/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/backtrace_cleaner.rb", {st_mode=S_IFREG|0644, st_size=3792, ...}) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kcumzd") = -1 ENOENT (No such file or directory)
+[pid 18647] ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+[pid 18647] write(1, "\33[1mTraceback\33[m (most recent ca"..., 42Traceback (most recent call last):
+) = 42
+[pid 18647] writev(1, [{iov_base="        1: from (irb):19", iov_len=24}, {iov_base="\n", iov_len=1}], 2        1: from (irb):19
+) = 25
+[pid 18647] write(1, "\33[1mNet::OpenTimeout (\33[4mexecut"..., 54Net::OpenTimeout (execution expired)
+) = 54
+[pid 18647] ioctl(0, TCGETS, 0x7ffd4c324c90) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] ioctl(0, TCGETS, 0x7ffd4c324c90) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] ioctl(0, TCGETS, 0x7ffd4c324c90) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 18647] read(0, "", 8192)           = 0
+[pid 18647] write(1, "\n", 1
+)           = 1
+[pid 18647] futex(0x55cd49f09a48, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18715] <... futex resumed> )       = 0
+[pid 18647] futex(0x55cd45922f88, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=999999485} <unfinished ...>
+[pid 18715] futex(0x55cd49f09a88, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 18715] futex(0x55cd45922f88, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 18647] <... futex resumed> )       = 0
+[pid 18715] madvise(0x7fdbebaa6000, 1028096, MADV_DONTNEED <unfinished ...>
+[pid 18647] futex(0x55cd45922fc8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 18715] <... madvise resumed> )     = 0
+[pid 18647] <... futex resumed> )       = 0
+[pid 18715] exit(0 <unfinished ...>
+[pid 18647] rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fdbfddce030},  <unfinished ...>
+[pid 18715] <... exit resumed>)         = ?
+[pid 18647] <... rt_sigaction resumed> {sa_handler=0x55cd44d2cbc0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fdbfddce030}, 8) = 0
+[pid 18715] +++ exited with 0 +++
+[pid 18647] rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fdbfddce030}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fdbfddce030}, 8) = 0
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-jdi148") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1x5kumw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-5h6t0o") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-4uj4c6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-hodq0s") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1s85s7q") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19t4800") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-u7pd2x") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1bie97u") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tcq2mf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-wn56o8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13a2bwb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1u619wa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-v617g2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-rnnnfm") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-nk9cd8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1yxd0e") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-b06630") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1il0oiv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-6kqws5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-hr2j40") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-rh6fec") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1xd2rc6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ykbhol") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-17qnbdw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-55o4z5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ozjrzv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1joh4im") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1erkvv2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-cs54lb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-we2o6a") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-sgfbul") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1muo4v5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-xlju4q") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2lgj9o") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kbya53") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18mdj38") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1if1rcv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-iku3dc") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1p6qyv1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-14bvygz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-112qpgo") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-sah04z") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1wl02fb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-i60erv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-15ykh93") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-cupb25") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-eyo8b9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1xmh67q") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1h59vb2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1gyqs8g") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-g7ncv6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-psz14w") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-y5bpum") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-wzbuht") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1cmjs0b") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1k30fc7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yijoyf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kqp17g") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1apegjt") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ffonmx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ktlolt") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ku4jdd") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-lisjhb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-k50efh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1lap239") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ltmn99") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-14uy2i6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-dbh3uc") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-g76jcm") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1roepwz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18fb14k") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-cn4pf3") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-4j9o0n") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ijmzqc") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1mck6ph") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1549eot") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-luu70e") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18239mj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yomupb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1v5pdye") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yclsp6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-crad2c") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1xopy0b") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-w38xpa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-piax8r") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-11qlz05") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-lsjhav") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rti3d") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-relff9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1hmcybd") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1f3esn3") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-3x5lrz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1hd9050") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-fta7yk") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1swbdq5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1xjr3gj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-17ja1rh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1t9a9qf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1gtd7x7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1pgokr1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tyf24l") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1mt90ka") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1mzrysa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-wcqdbb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2u6an7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-15effnn") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1i9i7ah") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1pu7wbq") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1v5t0u9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19pmord") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13vlach") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ux308r") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2j0kpa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-we0dom") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-14inpl") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-q6dcl1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vsef0k") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-346ib9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-765c86") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vpnwhv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-hdjc3a") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1puaqfl") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1i48if4") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-bhkhug") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-fb1we2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kwttwx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-iv1ky1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-10e350i") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ag32ig") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-81sz8x") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-uwxsgh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1l115ph") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-10dweny") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1kvqf7o") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-qy10xg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zkz4zr") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12q5340") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19u3gku") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1aspf2s") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-luo4oa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-7y890r") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-qc2wh8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1bod1ps") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-14oyeh9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-943d9s") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1dxb708") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12e4vhi") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13zuv5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12sk2bw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1t5g2yf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1yjevf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-152i9cn") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-6kax6b") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1bossnx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1vi6wpo") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yf1b0i") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-o01ilt") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1irphok") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1q1lzdv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-sny5c6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1e6vrao") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18saef8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1o85l2v") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1857xxg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-52j9qw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kk8twa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-94tg87") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1c4hs57") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13aqzne") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ngj05") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-rv9rp0") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1cm58sx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19rm90f") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1dw2d1d") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ctaj36") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-14bim24") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1dy46e1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1y7eyun") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16dyi8m") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-33ovdr") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-jtrhm0") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-aruv7z") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-141umxz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1fn3neb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1sa0czv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18y00m7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-24uiu6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-mbtmnf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-gj4cn4") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-kkdxes") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-9feby6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-h8lkuh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-110cq4r") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ekyx2t") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-eoudnt") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-5ofu6v") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13hlzgd") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjgsnv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-10yscu5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1fg2ih3") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1kvswdb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-xbwcxr") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-lv31d8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-6y4yv6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1g8d77a") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-24wjne") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-68zrco") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tiorcj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1s5ietv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-exzi9y") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-e6b3jl") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-5afhe2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ij02ng") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-96gpdw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1jt53tg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ge9rel") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1a8nnxh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-pd7qo") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-xcptcx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1oj38zj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-eodc9s") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1djxhe1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-chsv95") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-w6er5u") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-dx5rz0") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18celn0") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-l3vdil") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12hojpm") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-3q1m48") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1jc6p43") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-jqntzj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ba5b52") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1qraro6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vh9lr") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1srpgyl") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1oqdxfu") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-117x4ou") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-eedqv5") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-jni1oi") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1p2t1ed") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-v12pmt") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-nljp6q") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-qycn9i") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1p2xouv") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-rc4doi") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-a25yv7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1kyl0q1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19sfo4p") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-145cxw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tviyyx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-x91s9o") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1le0yvg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1mp6i72") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-e6npas") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-y5zn3q") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-11k2vq") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1vow8b7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1yhy53d") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-l4iq0v") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2ytciq") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18glgzf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1b41sxc") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ykgxwu") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1s8427b") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18onk7y") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16tqny0") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-dgtlw9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yiq385") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1utivhe") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-17syu7z") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-170cpti") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1hotdfs") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1dbxlo3") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1vpwl0p") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-118ru00") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rz3mo8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-123099l") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-5yhvgx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-nla6st") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-tq52bk") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-6yrma9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1053e2k") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1mi0je8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ttfrcd") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1gz4vfo") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1oc82kh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1t7wm20") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-75byjj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1dddal") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-13as2o7") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-71y16f") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-3v90n") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-rj2htg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yx4eu4") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1d28uml") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-jn6t90") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1ddzmox") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zg4r4f") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-j66odk") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-b708yx") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-6c1xsk") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-10e0xfc") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-2tukg9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-njrunb") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-r2hat2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-gy42ho") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1flnjpw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1lpnrhh") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1gdw366") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-12gy4fl") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-otowy8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-v88rp1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-19z4syg") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ai3tt9") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1r82juy") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-hysj0d") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1eudxv8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ny0l3s") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-18vihnw") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-s7uz81") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1lx6fig") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zi9sgj") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1hi6fev") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-px52vf") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-k7mo3p") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1pwai4u") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1yw8jk") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-17l6wml") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vr02l8") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-dnc143") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-32kooa") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1lqhui1") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-ttfo5u") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-su2492") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1rjy2vn") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-16icyu2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1tqwbtu") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-zc6gji") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-whfd44") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1m2tjg6") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-1axt9s2") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-yrdh7v") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-j1dtjz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] unlink("/home/inecas/tmp/cache-net-timeout/tmp/cache/.hello20190309-18647-vgzkyz") = -1 ENOENT (No such file or directory)
+[pid 18647] getpid()                    = 18647
+[pid 18647] close(8)                    = 0
+[pid 18647] close(7)                    = 0
+[pid 18647] close(4 <unfinished ...>
+[pid 18706] <... poll resumed> )        = 1 ([{fd=3, revents=POLLHUP}])
+[pid 18647] <... close resumed> )       = 0
+[pid 18706] read(3,  <unfinished ...>
+[pid 18647] close(6 <unfinished ...>
+[pid 18706] <... read resumed> "", 1024) = 0
+[pid 18647] <... close resumed> )       = 0
+[pid 18706] read(5,  <unfinished ...>
+[pid 18647] futex(0x7fdbfde199d0, FUTEX_WAIT, 18706, NULL <unfinished ...>
+[pid 18706] <... read resumed> "", 1024) = 0
+[pid 18706] close(3)                    = 0
+[pid 18706] close(5)                    = 0
+[pid 18706] exit(0)                     = ?
+[pid 18706] +++ exited with 0 +++
+[pid 18647] <... futex resumed> )       = 0
+[pid 18647] munmap(0x7fdbf0983000, 1052672) = 0
+[pid 18647] munmap(0x7fdbed2ae000, 528384) = 0
+[pid 18647] munmap(0x7fdbed12d000, 1576960) = 0
+[pid 18647] exit_group(0)               = ?
+[pid 18647] +++ exited with 0 +++
+<... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 18647
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4dfc2505c0}, {sa_handler=0x55eae6e9eae0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4dfc2505c0}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+close(3)                                = -1 EBADF (Bad file descriptor)
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=18646, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, 0x7ffc6756a2d0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+read(255, "", 597)                      = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+exit_group(0)                           = ?
+

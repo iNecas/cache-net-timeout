@@ -1,4 +1,9 @@
-cat <<EOF | scl enable tfm -- rails console
+#!/usr/bin/env bash
+
+# seems like content of the tmp/cache is relevant here reverting to the git state
+git checkout -- tmp/cache
+
+cat <<EOF | rails console
    conf.return_format = ""
    require 'logger'
    require 'net/http'
@@ -17,10 +22,10 @@ cat <<EOF | scl enable tfm -- rails console
        end
        Rails.cache.fetch('hello') { nil }
        Net::HTTP.get_response(url)
-     rescue Exception => e
-       log.info "Error at iteration #{iteration * 1000 + cycle}"
-       log.info "#{e.class} #{e.message}"
-       log.info e.backtrace.join("\n")
+     rescue => e
+       log.error("#{e.class}:#{e.message}")
+       log.error("#{e.backtrace.join("\n")}")
+       exit
      end
    end
 EOF
